@@ -76,6 +76,11 @@ $remNode = (isset($parms['node']) && validDbID($parms['node']) && strlen($parms[
 
 showConnStatusTable();
 showNodeCtrlForm();
+if(strtolower($gCfg[skywarn_master_enable] ?? '') === 'yes') {
+	echo '<div class="skywarn-wrapper">';
+	showSkywarnAlerts();
+	echo '</div>';
+}
 
 h2('Favorites');
 // Read in favorites.ini

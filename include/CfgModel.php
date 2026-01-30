@@ -18,6 +18,8 @@ define('amiport', 9);
 define('amiuser', 10);
 define('amipass', 11);
 define('cmdbuttons', 12);
+define('skywarn_master_enable', 13);
+define('skywarn_api_url', 14);
 
 // Global Cfgs Default Values
 $gCfgDef = [
@@ -32,7 +34,9 @@ $gCfgDef = [
 	amiport => '',
 	amiuser => '',
 	amipass => '',
-	cmdbuttons => []
+	cmdbuttons => [],
+	skywarn_master_enable => 'no',
+	skywarn_api_url => 'http://localhost:8100'
 ];
 
 $gCfgName = [
@@ -47,8 +51,12 @@ $gCfgName = [
 	amiport => 'AMI Port',
 	amiuser => 'AMI User',
 	amipass => 'AMI Pass',
-	cmdbuttons => 'Custom Cmd Buttons'
+	cmdbuttons => 'Custom Cmd Buttons',
+	skywarn_master_enable => 'SkywarnPlus Enable',
+	skywarn_api_url => 'SkywarnPlus API URL'
 ];
+
+$skywarnEnableVals = ['no' => 'Off', 'yes' => 'On'];
 
 $publicPermissionVals = [
 	PERMISSION_NONE			=> 'None (No Access)',
@@ -71,7 +79,9 @@ $gCfgVals = [
 	amiport => null,
 	amiuser => null,
 	amipass => null,
-	cmdbuttons => null
+	cmdbuttons => null,
+	skywarn_master_enable => $skywarnEnableVals,
+	skywarn_api_url => null
 ];
 
 // Global Cfgs structure

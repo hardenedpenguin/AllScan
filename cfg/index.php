@@ -44,6 +44,7 @@ h1("Manage Cfgs");
 h2("Configuration Parameters");
 $view->showCfgs($gCfg);
 p("Node Number and AMI Cfgs default to values in /etc/asterisk/ rpt.conf and manager.conf if not set here.");
+p("SkywarnPlus cfgs integrate weather alerts from " . $html->a('https://github.com/hardenedpenguin/SkywarnPlus-NG', null, 'SkywarnPlus-NG', null, '_blank') . ". Enable and set API URL (e.g. http://localhost:8100).", 'w800', false);
 $view->showForms($cfg ?? null);
 echo '</div>' . BR. NL;
 
